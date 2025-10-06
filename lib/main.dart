@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: '2048 Flutter',
-      // theme: ThemeData(primarySwatch: Colors.orange),
       home: Game(),
     );
   }
@@ -29,7 +28,6 @@ class _GameState extends State<Game> {
   int score = 0;
   Random rnd = Random();
 
-  // bool movedThisTurn = false;
   bool get isGameOver => !canMove();
 
   @override
@@ -41,14 +39,8 @@ class _GameState extends State<Game> {
   void initGame() {
     board = List.generate(size, (_) => List.filled(size, 0));
     score = 0;
-    // addRandomTile(true);
-    // addRandomTile(true);
-    board[1][0] = 1024;
-    board[1][1] = 1024;
-    board[2][0] = 1;
-    board[2][1] = 3;
-    board[2][2] = 2048;
-    setState(() {});
+    addRandomTile(true);
+    addRandomTile(true);
   }
 
   void addRandomTile(bool init) {

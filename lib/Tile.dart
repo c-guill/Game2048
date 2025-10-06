@@ -11,10 +11,6 @@ class Tile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final style = _tileStyle(value);
-    final txt = value == 0 ? '' : '$value';
-    final txtStyle = value <= 4
-        ? TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: Colors.black87)
-        : TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white);
     return AnimatedContainer(
       duration: Duration(milliseconds: 120),
       decoration: BoxDecoration(
